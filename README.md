@@ -19,19 +19,22 @@ O objetivo é documentar minha aprendizagem e praticar conceitos fundamentais e 
     poo-python/
     │
     ├── 01_classes_objetos/
-    │   └── exemplos_basicos.py
-    │
+    ├───|── exemplos1_basicos.py
+    │   └── exemplos2_basicos.py
+    |
     ├── 02_atributos_metodos/
     │   ├── atributos_instancia.py
     │   ├── atributos_classe.py
     │   └── metodos_estaticos_de_classe.py
     │
     ├── 03_encapsulamento/
-    │   └── encapsulamento_propriedades.py
+    │   |── recursos_públicos_privados.py
+    │   ├── propiedades1.py
+    │   └── propiedades2.py
     │
     ├── 04_heranca_polimorfismo/
     │   ├── heranca_simples.py
-    │   └── polimorfismo_exemplo.py
+    │   └── heranca_multipla.py
     │
     ├── 05_composicao/
     │   └── composicao_objetos.py
