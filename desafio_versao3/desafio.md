@@ -1,92 +1,59 @@
-# Projeto Desafio DIO.ME  
-## Criando um Sistema Bancário com Python
+# 💳 Sistema Bancário Simples em Python (VILAVELHA)
 
-### 🧩 Versão 1: Regras Básicas
-
-O desafio proposto consistia na criação de um sistema bancário simples para um único usuário, respeitando quatro regras principais:
-
-- Não permitir **depósitos** ou **saques** com **valores negativos**;
-- Limitar **saques** a um valor máximo de **R$ 500** por operação;
-- Restringir o número de **saques** e **depósitos** a **5 por dia**;
-- Registrar todas as movimentações em um **extrato**, acessível mediante solicitação do usuário.
+Este é o desafio que foi proposto inical pela dio.me ele é um sistema bancário simples desenvolvido em Python com funcionalidades básicas como cadastro de clientes, criação de contas, depósitos, saques e emissão de extrato bancário. O sistema utiliza conceitos de orientação a objetos e boas práticas de programação.
 
 ---
 
-### 🪛 Versão 2: Evolução em limites trasações
-
-O desafio proposto consistia na criação de um sistema bancário simples para um único usuário, respeitando quatro regras principais:
-
-- Não permitir **depósitos** ou **saques** com **valores negativos**;
-- Limitar **saques** a um valor máximo de **R$ 500** por operação;
-- Restringir o número de **saques** e **depósitos** em **10 por dia**;
-- Registrar todas as movimentações em um **extrato** com data e hora da transação, acessível mediante solicitação do usuário.
-
----
-
-### 🛠️ Versão 3: Evolução para Múltiplos Usuários e Contas
-
-Nesta fase, o sistema passou por melhorias estruturais e novas funcionalidades:
-
-#### ✅ Refatoração de Funções
-
-- As funções de **saque**, **depósito** e **extrato** foram separadas em funções distintas.
-- Foram criadas duas novas funções:
-  - `criar_usuario()` — para cadastrar clientes;
-  - `criar_conta_bancaria()` — para cadastrar contas bancárias.
-  - `vincular_conta()` — para associar a conta ao usuário correspondente.
-
-
-#### ⚙️ Regras Técnicas
-
-- A função `saque` deve receber os argumentos **apenas por nome** (`keyword only`);
-- A função `depósito` deve receber os argumentos **apenas por posição** (`positional only`);
+## 🧠 Funcionalidades
+### Obrigatórias 
+- Cadastro de cliente (Pessoa Física)
+- Criação automática de conta corrente
+- Realização de depósitos e saques
+- Controle de limite de saque diário e valor máximo por saque
+- Histórico de transações (extrato)
+### Criadas por mim 
+- Login
+- Menu
+- Validação básica de CPF
 
 ---
 
-#### 👤 Cadastro de Usuários
+## ⚙️ Estrutura do Projeto
 
-- Os **usuários** devem ser armazenados em uma **lista**;
-- Cada usuário é composto por:
-  - `nome`
-  - `data de nascimento`
-  - `cpf` (apenas números)
-  - `endereço` (formato: `logradouro, nro - bairro - cidade/sigla estado`)
-- Não é permitido cadastrar dois usuários com o **mesmo CPF**.
-
----
-
-#### 🏦 Cadastro de Contas Bancárias
-
-- As **contas bancárias** devem ser armazenadas em uma **lista**;
-- Cada conta é composta por:
-  - `agência` (valor fixo: `'0001'`)
-  - `número da conta` (sequencial, iniciando em 1)
-  - `usuário` (referência a um usuário existente)
-- Um **usuário pode ter várias contas**, mas **uma conta pertence a apenas um usuário**.
+- **Cliente e Pessoa Física**: Gerencia os dados pessoais e as contas associadas.
+- **Conta e Conta Corrente**: Gerencia saldo, saques, depósitos e regras de negócio.
+- **Transações (Depósito/Saque)**: Aplicadas como comandos separados com registro no histórico.
+- **Histórico**: Guarda as transações realizadas.
+- **Validador**: Realiza verificação de CPF.
+- **Menu e Login**: Interação com o usuário via terminal.
 
 ---
 
-#### 🔍 Vinculação de Contas
+## 🔧 Requisitos
 
-- Para vincular uma conta a um usuário, o sistema deve:
-  - Solicitar o CPF
-  - Procurar o CPF na lista de usuários
-  - Se encontrado, associar a conta ao usuário correspondente
+- Python 3.7+
+- Terminal/Shell para rodar o script
 
 ---
 
-#### 📋 Listagem
+## ▶️ Como Executar
 
-- Para listar usuários e suas contas:
-  - Filtrar a lista de usuários pelo número do CPF
-  - Exibir as contas associadas a cada usuário
+1. Clone ou copie o código.
+2. Salve-o como `sistema_bancario.py`
+3. Execute no terminal:
 
 ---
 
-### ✅ Conclusão
+## 🧠 Aprendizados e Experiência Pessoal
 
-Este projeto foi desenvolvido como parte do desafio prático da plataforma **DIO.ME**, reforçando conceitos de:
-- Estruturação de código com funções
-- Uso de listas e dicionários
-- Entrada e saída de dados no terminal
-- Boas práticas de programação em Python
+Este projeto foi desenvolvido como prática dos meus estudos em Python, com foco nos seguintes conceitos:
+
+- Orientação a Objetos (classes, herança, encapsulamento)
+- Uso de classes abstratas com `abc.ABC`
+- Organização de responsabilidades entre objetos
+- Manipulação de listas e atributos privados
+- Criação de menus simples com interação via terminal
+- Validação de entrada (como CPF)
+- Registro de histórico com data e hora usando `datetime`
+
+Ainda estou desenvolvendo minhas habilidades por isso contei com apoio de ferramentas que me ajudaram a estruturar melhor as seções técnicas e a resolver problemas que ja estavam gastando muito do meu tempo, mas sem deixa de lado objetivo princiapal que era o aprendizado pratico. Este projeto representa um passo importante na minha jornada de aprendizado.
