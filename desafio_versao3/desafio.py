@@ -286,6 +286,7 @@ def exibir_extrato(conta):
 
 
 while True:
+    print(" BANCO VILAVELHA ".center(50,":"))
     opcao = Menu.exibir_inicial()
 
     if opcao == "L":
@@ -337,7 +338,7 @@ while True:
                 print("Opção inválida")
 
     elif opcao == "Q":
-        print("Obrigado por usar nosso sistema bancário!")
+        print("Obrigado por usar nosso serviços")
         break
     else:
         print("Opção inválida")
