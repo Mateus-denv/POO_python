@@ -49,7 +49,7 @@ class Conta():
 
     @classmethod
     def nova_conta(cls, cliente, numero):
-        return cls(cliente, numero)
+        return cls(numero, cliente)
 
     @property
     def saldo(self):
