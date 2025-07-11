@@ -109,7 +109,7 @@ class ContaCorrente(Conta):
         )
 
         exedeu_limite = valor > self._limite
-        exedeu_saques = numeros_de_saques_feitos == self._limites_saques
+        exedeu_saques = numeros_de_saques_feitos >= self._limites_saques
 
         if exedeu_limite:
             print("Operação falhou!!!\nVc exedeu limite de saque")
