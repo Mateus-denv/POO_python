@@ -13,7 +13,7 @@ class Cliente():
 
     def realizar_transacao(self, conta, transacao):
         self._conta = conta
-        self._transacao = transacao
+        transacao.registrar_transacao(self._conta)
 
     def adicionar_conta(self, conta):
         self._contas.append(conta)
