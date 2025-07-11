@@ -15,7 +15,7 @@ class Cliente():
         self._conta = conta
         self._transacao = transacao
 
-    def adicionar_cliente(self, conta):
+    def adicionar_conta(self, conta):
         self._contas.append(conta)
 
     @property
@@ -232,7 +232,7 @@ class Login():
 def criar_conta_corrente(cliente):
     global numero_conta
     conta = ContaCorrente(numero_conta, cliente)
-    cliente.adicionar_cliente(conta)
+    cliente.adicionar_conta(conta)
     contas.append(conta)
     numero_conta += 1
     print(f"Conta corrente criada com sucesso! Número: {conta.numero}")
